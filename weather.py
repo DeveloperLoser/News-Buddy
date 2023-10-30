@@ -39,3 +39,5 @@ if __name__ == "__main__":
     updateData()
     root = parseData('newdata.xml')
     print(gethHourlyTemp(root)[0:calcTime()])
+    print(getRain(root)[0:calcTime()])
+        
