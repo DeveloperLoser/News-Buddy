@@ -35,6 +35,13 @@ def getRain(root):
                 rainchance.append(val.text)
     return rainchance
 
+def getWeather():
+    updateData()
+    root = parseData('newdata.xml')
+    templist = (gethHourlyTemp(root)[0:calcTime()])
+    rainlist = (getRain(root)[0:calcTime()])
+    return templist, rainlist
+
 if __name__ == "__main__":
     updateData()
     root = parseData('newdata.xml')
